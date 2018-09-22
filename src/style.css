@@ -1,0 +1,29 @@
+h1.header {
+    margin-top: 3rem !important;
+    text-align: center !important;
+    color: blue;
+}
+
+h3.dividing.header.small {
+    margin-top: 3rem !important;
+    margin-bottom: 1rem !important;
+    text-align: center !important;
+}
+
+.notebook {
+    margin-top: 3rem !important;
+}
+
+.note {
+    margin-bottom: 3rem !important;
+}
+
+.newNote {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.snippet {
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+}
