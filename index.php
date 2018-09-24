@@ -1,3 +1,8 @@
+<?php
+//session_destroy();
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang='en'>
 <head>
@@ -14,7 +19,7 @@
 
         <!-- Note form -->
         <div class="ui raised segment newNote">
-            <form class="ui form" method="GET" action="notes.php">
+            <form class="ui form" method="GET" action="server/notes.php">
 
                 <!-- Note Fields -->                
                 <div class="fields">
@@ -28,6 +33,9 @@
                             <option value="standard">Tavaline</option>
                             <option value="priority">Tähtis</option>
                         </select>
+                    </div>
+                    <div>
+                        <input type="hidden" id="noteId">
                     </div>
                 </div>
                 
