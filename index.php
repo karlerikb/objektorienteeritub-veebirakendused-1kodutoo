@@ -1,5 +1,4 @@
 <?php
-//session_destroy();
 session_start();
 ?>
 
@@ -15,11 +14,19 @@ session_start();
 
 <body>
     <div class="ui container">
-        <h1 class="ui header main-header">Märkmed</h1>
+
+         <nav class="navigation">
+            <a class="ui right labeled icon button" href="server/notespage.php">
+                <i class="right arrow icon"></i>
+                Märkmed
+            </a>
+        </nav>
+
+        <h1 class="ui header main-header">Märkme loomine</h1>
 
         <!-- Note form -->
         <div class="ui raised segment newNote">
-            <form class="ui form" method="GET" action="server/notes.php">
+            <form class="ui form" method="GET" action="server/notespage.php">
 
                 <!-- Note Fields -->                
                 <div class="fields">

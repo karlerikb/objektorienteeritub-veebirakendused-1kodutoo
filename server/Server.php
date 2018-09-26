@@ -4,7 +4,7 @@ class Server {
     
     static $sessionNotes = [];
     static $sessionNotesKeys = [];
-    
+
     
     static function parseQuery() {
 
@@ -17,14 +17,20 @@ class Server {
 
     static function setQueryParamsToSessionVariable() {
 
-        if ($_SESSION["sessionNotes"] == "") {
-            $_SESSION["sessionNotes"] = [];
+        // Checking if query string exists
+        if ($_SERVER["QUERY_STRING"]) {
+
+            // When query string exists, checking if empty arrays exist in session
+            if ($_SESSION["sessionNotes"] == "") {
+                $_SESSION["sessionNotes"] = [];
+            }
+    
+            if ($_SESSION["sessionNotesKeys"] == "") {
+                $_SESSION["sessionNotesKeys"] = [];
+            }
         }
 
-        if ($_SESSION["sessionNotesKeys"] == "") {
-            $_SESSION["sessionNotesKeys"] = [];
-        }
-
+        // Checking if note already exists in session
         if (!self::noteExists()) {
             array_push($_SESSION["sessionNotes"], self::$sessionNotes);
             array_push($_SESSION["sessionNotesKeys"], self::$sessionNotesKeys);
@@ -42,7 +48,7 @@ class Server {
     }
     
     public static function init() {
-
+        
         self::parseQuery();
         self::setQueryParamsToSessionVariable();
     }

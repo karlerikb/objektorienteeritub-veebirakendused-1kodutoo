@@ -33,6 +33,11 @@ Server::init();
         
         <div class="notebook">
 
+<?php
+
+Note::init();
+
+?>
             <!-- Note -->
             <div class="ui raised segments note">
                 <!-- Note title -->
@@ -89,9 +94,9 @@ Server::init();
 
 
 echo "<br><br><br>";
-print_r($_SESSION["sessionNotes"]);
+//print_r($_SESSION["sessionNotes"]);
 echo "<br><br><br>";
-print_r($_SESSION["sessionNotesKeys"]);
+//print_r($_SESSION["sessionNotesKeys"]);
 
 
 
