@@ -13,7 +13,7 @@ class ListSnippet extends Snippet {
     function generateHTML() {
         //$this->generateListHTML();
 
-        return "<p>". $this->generateListHTML() ."</p>";
+        return "<p><ul class='ui list>'". $this->generateListHTML() ."</ul></p>";
     }
 
 
@@ -38,14 +38,19 @@ class ListSnippet extends Snippet {
 
         foreach ($stringArray as $row) {
             $trimmedRow = trim($row);
+            $trimmedText = explode("*", $trimmedRow)[1];
 
             if (substr($trimmedRow, 0, 1) === "*") {
-                $listHTML .= "<li>".explode("*", $trimmedRow)[1]."</li>";
+                if ($trimmedText != "") {
+                    $listHTML .= "<li>".$trimmedText."</li>";
+                }
 
                 array_push($rowsArray["list_".++$counter] = $trimmedRow);
 
             } else {
-                $listHTML .= "<li>". $trimmedRow ."</li>";
+                if ($trimmedRow != "") {
+                    $listHTML .= "<li>". $trimmedRow ."</li>";
+                }
 
                 array_push($rowsArray["text_".++$counter] = $trimmedRow);
             }

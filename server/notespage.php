@@ -34,91 +34,9 @@ Server::init();
         <div class="notebook">
 
 <?php
-
 Note::init();
-
 ?>
-            <!-- Note -->
-            <div class="ui raised segments note">
-                <!-- Note title -->
-                <div class="ui clearing segment orange">
-                    <h2 class="ui left floated header main-header">Pealkiri</h2>
-                    <div class="ui right floated label orange">
-                        <i class="exclamation icon"></i>
-                        Tähtis
-                    </div>
-                </div>
-
-                <!-- Note body -->
-                <div class="ui segment">
-                    <p class="test">Secondary Content</p>
-                    <p>Secondary Content</p>
-                    <p>Secondary Content</p>
-                </div>
-            </div>
-
-
-            <!-- Note -->
-            <div class="ui raised segments note">
-
-                <!-- Note title -->
-                <div class="ui segment">
-                    <h2 class="ui header main-header">Pealkiri</h2>
-                </div>
-
-                <!-- Note body -->
-                <div class="ui segment">
-                    <p>Secondary Content</p>
-                    <ul class="ui list">
-                        <li>Gaining Access</li>
-                        <li>Inviting Friends</li>
-                        <li>Benefits
-                            <ul>
-                                <li>Use Anywhere</li>
-                                <li>Rebates</li>
-                                <li>Discounts</li>
-                            </ul>
-                        </li>
-                        <li>Warranty</li>
-                    </ul>
-                </div>
-            </div>
 
         </div>
     </div>
 </body>
-
-<?php
-
-
-
-
-echo "<br><br><br>";
-//print_r($_SESSION["sessionNotes"]);
-echo "<br><br><br>";
-//print_r($_SESSION["sessionNotesKeys"]);
-
-
-
-
-
-
-
-
-
-
-
-for($i=0; $i < count($keys); ++$i) {
-    //echo $keys[$i] . ' ' . $query_params[$keys[$i]] . "\n";
-}
-
-$textarea = $_GET["snip_text_1"];
-$linebreaks = ["\r\n", "\r", "\n"];
-
-$string = str_replace($linebreaks, "§", $textarea);
-
-$stringArray = explode("§", $string);
-
-//var_dump($stringArray);
-
-?>
