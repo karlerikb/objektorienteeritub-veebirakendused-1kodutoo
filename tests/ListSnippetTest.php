@@ -51,8 +51,14 @@ class ListSnippetTest extends TestCase {
     }
 
 
-    
+
 
 }
 
+/*
+
+./../../phpunit ListSnippetTest.php 
+
+*/
 ?>
+
