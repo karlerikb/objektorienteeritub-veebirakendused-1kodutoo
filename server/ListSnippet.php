@@ -13,7 +13,7 @@ class ListSnippet extends Snippet {
     function generateHTML() {
         //$this->generateListHTML();
 
-        return "<p><ul class='ui list>'". $this->generateListHTML() ."</ul></p>";
+        return "<ul class='ui list'>". $this->generateListHTML() ."</ul>";
     }
 
 
@@ -49,7 +49,7 @@ class ListSnippet extends Snippet {
 
             } else {
                 if ($trimmedRow != "") {
-                    $listHTML .= "<li>". $trimmedRow ."</li>";
+                    $listHTML .= $trimmedRow ."<br>";
                 }
 
                 array_push($rowsArray["text_".++$counter] = $trimmedRow);
